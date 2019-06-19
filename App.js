@@ -45,7 +45,7 @@ export default class App extends React.Component {
         <Text>Incorrect behavior: re-renders without extraData prop (with style property)</Text>
         <FlatList
           data={items}
-          style={{margin: 5}}
+          style={styles.styledFlatList}
           renderItem={({ item, index }) => {
             const isActive = index === activeItem;
             const style = isActive ? { backgroundColor: 'red' } : {};
@@ -67,5 +67,8 @@ const styles = StyleSheet.create({
   statusBar: {
     backgroundColor: '#C2185B',
     height: Constants.statusBarHeight,
+  },
+  styledFlatList: {
+    margin: 5,
   },
 });
